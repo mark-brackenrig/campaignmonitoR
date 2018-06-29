@@ -1,1 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+import(httr)
+import(devtools)
+import(jsonlite)
+import(lubridate)
