@@ -10,9 +10,6 @@
 }
 \details{
 
-The DESCRIPTION file:
-\packageDESCRIPTION{campaignmonitoR}
-\packageIndices{campaignmonitoR}
 This package is designed to interface with the campaign monitor API in an intuitive manner to assist with bespoke analysis of email marketing activity.  
 }
 \author{
@@ -26,9 +23,11 @@ Christoph Waldhauser. 2015. Accessing APIs from R (and a little R programming). 
 ~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation directory ~~
 \keyword{ package }
 \seealso{
-~~ TODO ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+
+ \code{\link{Client}}
+ \code{\link{Campaign}}
 }
 \examples{
-~~ TODO ~~
+
+
 }
