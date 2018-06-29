@@ -13,7 +13,7 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{campaignmonitoR}
 \packageIndices{campaignmonitoR}
-~~ An overview of how to use the package, including the most important functions ~~
+This package is designed to interface with the campaign monitor API in an intuitive manner to assist with bespoke analysis of email marketing activity.  
 }
 \author{
 \packageAuthor{campaignmonitoR}
@@ -21,14 +21,14 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{campaignmonitoR}
 }
 \references{
-~~ Literature or other references for background information ~~
+Christoph Waldhauser. 2015. Accessing APIs from R (and a little R programming). [ONLINE] Available at: https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/. [Accessed 29 June 2018].
 }
 ~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation directory ~~
 \keyword{ package }
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
+~~ TODO ~~
 ~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
 }
 \examples{
-~~ simple examples of the most important functions ~~
+~~ TODO ~~
 }

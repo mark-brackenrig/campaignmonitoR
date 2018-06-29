@@ -1,9 +1,9 @@
 Package: campaignmonitoR
 Type: Package
-Title: What the package does (short line)
+Title: API wrapper for Campaign Monitor
 Version: 1.0
 Date: 2018-06-29
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Mark Brackenrig
+Maintainer: Mark Brackenrig <mark@brackenrig.net>
+Description: This package is a basic API wrapper for the Campaign Monitor API. Contains a range of functions that will call the API and return results in a data frame format.
+License: MIT license

@@ -1,4 +1,4 @@
-listsubscribers <- function(listID, type,auth=Sys.getenv("CampMonauth")){
+listsubscribers <- function(listID, type=c("active", "unconfirmed", "unsubscribed", "bounced", "deleted"),auth=Sys.getenv("CampMonauth")){
   
   if(type %in% c("active", "unconfirmed", "unsubscribed", "bounced", "deleted")){
     url <- paste0('https://api.createsend.com/api/v3.2/lists/',listID,'/',type,'.json', collapse = ", ")
