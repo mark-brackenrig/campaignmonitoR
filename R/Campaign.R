@@ -7,7 +7,8 @@ Campaign <- function(campaignID, type=c("recipients", "bounces", "opens", "click
                            names = c("Recipients", "Bounced", "UniqueOpened", "Clicks", "Unsubscribed","SpamComplaints"))
     sum<- Campaign_summary(campaignID)
     sum <- subset(sum, select=c(as.character(TypeDF$names[TypeDF$types==type])))
-    sum <- ceiling(sum/1000)
+    sum <- ceiling(as.numeric(sum)/1000)
+    pb <- txtProgressBar(min = 0, max = sum, style = 3)
     for(i in 1:sum){
     url <- paste0('https://api.createsend.com/api/v3.2/campaigns/',campaignID,'/',type,'.json?page=',i, collapse = ", ")
     
@@ -18,7 +19,10 @@ Campaign <- function(campaignID, type=c("recipients", "bounces", "opens", "click
     this.content <- fromJSON(this.raw.content)
     temp <- as.data.frame(this.content)
     if(i==1){content <- temp}else{content <- rbind(temp,content)}
+    setTxtProgressBar(pb, i)
+    
     }
+    close(pb)
     }else{ url <- paste0('https://api.createsend.com/api/v3.2/campaigns/',campaignID,'/',type,'.json', collapse = ", ")
     
     raw.result = GET(url = url,authenticate(user = auth, password = ""))
