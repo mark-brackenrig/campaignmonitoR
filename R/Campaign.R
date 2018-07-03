@@ -5,9 +5,8 @@ Campaign <- function(campaignID, type=c("recipients", "bounces", "opens", "click
     if(length>1000){
       TypeDF <- data.frame(types = c("recipients", "bounces", "opens", "clicks", "unsubscribes", "spam"), 
                            names = c("Recipients", "Bounced", "UniqueOpened", "Clicks", "Unsubscribed","SpamComplaints"))
-    sum<- Campaign_summary(campaignID)
-    sum <- subset(sum, select=c(as.character(TypeDF$names[TypeDF$types==type])))
-    sum <- ceiling(as.numeric(sum)/1000)
+
+    sum <- ceiling(length/1000)
     pb <- txtProgressBar(min = 0, max = sum, style = 3)
     for(i in 1:sum){
     url <- paste0('https://api.createsend.com/api/v3.2/campaigns/',campaignID,'/',type,'.json?page=',i, collapse = ", ")
